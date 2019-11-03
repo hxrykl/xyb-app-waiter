@@ -5,6 +5,7 @@ import Manager from '../pages/manager/Layout'
 import Home from '../pages/manager/Home'
 import Order from '../pages/manager/Order'
 import User from '../pages/manager/User'
+import MyIncom from '../pages/manager/MyIncom'
 // 登录页面
 import Login from '../pages/Login'
 import { getToken } from '../utils/auth'
@@ -34,6 +35,10 @@ const routes = [
     {
       path: 'user',
       component: User,
+    },
+    {
+      path:'myincom',
+      component:MyIncom
     }]
   },
   {

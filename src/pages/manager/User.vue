@@ -1,12 +1,6 @@
 <template>
   <div class="user">
-      <!-- <div class="nav">
-        <van-nav-bar title="我的页面"/>
-      </div>
-    <p>
-      <a href="" @click.prevent="logoutHandler">退出</a>
-    </p> -->
-    <div class="img" style="background:#4696f9;height:220px;">
+    <div class="img" style="background:#02b8a6;height:220px;">
       <div style="text-align:right;padding:0.5em;">
         <span style="color:white;font-size:1.2em;">设置</span>
       </div>
@@ -28,7 +22,7 @@
        <van-cell is-link @click="myOrder">我的订单</van-cell>
     </div>
     <div class="btn" style="text-align:center;">
-      <van-button plain type="danger" 
+      <van-button plain color="#ff912f" 
       @click="logoutHandler" size="large" 
       style="width:65%;height:40px;line-height:40px;border-radius:4px;margin-top:230px;">
       退出</van-button>
@@ -43,9 +37,14 @@ export default {
     //动作
     ...mapActions("user",["logout"]),
     //普通方法
-    // 我的订单方法
-    myOrder() {},
-    myEarnings() {},
+    // 跳转到我的订单方法
+    myOrder() {
+      this.$router.push({path:'/manager/order'})
+    },
+    // 跳转到我的收入界面方法
+    myEarnings() {
+      this.$router.push({path:'/manager/myincom'})
+    },
     // 退出登录方法
     logoutHandler(){
       this.logout()//退出

@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="form">
-        {{form}}
+        <!-- {{form}} -->
         <van-cell-group>
           <van-field
             v-model="form.username"
@@ -27,9 +27,9 @@
           />
         </van-cell-group>
         <div style="text-align:center">
-          <van-button type="default"
-            icon="https://img.yzcdn.cn/vant/logo.png" 
-            @click="loginHandler">登陆</van-button>
+          <van-button plain round type="primary"
+          style="width:100px;margin-top:30px;"
+          @click="loginHandler">登陆</van-button>
         </div>
       </div>
   </div>
@@ -63,7 +63,7 @@ export default {
     height:140px;
     padding:50px;
     color:#ffffff;
-    background-color:cyan;
+    background-color:#02b8a6;
     text-align: center
   }
   .header .logo {

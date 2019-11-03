@@ -19,15 +19,21 @@
                   </van-col>
                   <van-col :span="20" style="font-size:12px;color:gray;">下单时间:{{o.orderTime}}</van-col>
                 </van-row>
-                <van-row>
+                <!-- <van-row>
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
                     <van-icon name="clock-o" style="font-size:12px;color:gray;"></van-icon>
                   </van-col>
                   <van-col :span="20" style="font-size:12px;color:gray;">服务内容:{{}}</van-col>
+                </van-row> -->
+                <van-row>
+                  <van-col :span="4" style="text-align:center;margin-buttom:5px;">
+                    <van-icon name="phone-o" style="font-size:12px;color:gray;"></van-icon>
+                  </van-col>
+                  <van-col :span="20" style="font-size:12px;color:gray;">电话:{{o.customer.telephone}}</van-col>
                 </van-row>
                 <van-row>
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
-                    <van-icon name="" style="font-size:12px;color:gray;"></van-icon>
+                    <van-icon name="location-o" style="font-size:12px;color:gray;"></van-icon>
                   </van-col>
                   <van-col :span="20" style="font-size:12px;color:gray;">
                     地址:{{o.address.province}}{{o.address.city}}{{o.address.area}}{{o.address.address}}
@@ -57,9 +63,9 @@
 
                   <van-row>
                       <van-col :span="4" style="text-align:center;margin-bottom:5px;">
-                          <van-icon name="newspaper-o" style="font-size:12px;color:gray;"></van-icon>
+                          <van-icon name="phone-o" style="font-size:12px;color:gray;"></van-icon>
                       </van-col>
-                      <van-col :span="20" style="font-size:12px;color:gray;">服务内容：{{}}</van-col>
+                      <van-col :span="20" style="font-size:12px;color:gray;">顾客电话：{{o.customer.telephone}}</van-col>
                   </van-row>
                   <van-row>
                       <van-col :span="4" style="text-align:center;margin-bottom:5px;">
@@ -100,11 +106,11 @@
                 </van-row>
 
                 <van-row>
-                    <van-col :span="4" style="text-align:center;margin-bottom:5px;">
-                        <van-icon name="newspaper-o" style="font-size:12px;color:gray;"></van-icon>
-                    </van-col>
-                    <van-col :span="20" style="font-size:12px;color:gray;">服务内容：{{}}</van-col>
-                </van-row>
+                      <van-col :span="4" style="text-align:center;margin-bottom:5px;">
+                          <van-icon name="phone-o" style="font-size:12px;color:gray;"></van-icon>
+                      </van-col>
+                      <van-col :span="20" style="font-size:12px;color:gray;">顾客电话：{{o.customer.telephone}}</van-col>
+                  </van-row>
                 <van-row>
                     <van-col :span="4" style="text-align:center;margin-bottom:5px;">
                         <van-icon name="location-o" style="font-size:12px;color:gray;"></van-icon>
@@ -140,11 +146,11 @@
                 </van-row>
 
                 <van-row>
-                    <van-col :span="4" style="text-align:center;margin-bottom:5px;">
-                        <van-icon name="newspaper-o" style="font-size:12px;color:gray;"></van-icon>
-                    </van-col>
-                    <van-col :span="20" style="font-size:12px;color:gray;">服务内容：{{}}</van-col>
-                </van-row>
+                      <van-col :span="4" style="text-align:center;margin-bottom:5px;">
+                          <van-icon name="phone-o" style="font-size:12px;color:gray;"></van-icon>
+                      </van-col>
+                      <van-col :span="20" style="font-size:12px;color:gray;">顾客电话：{{o.customer.telephone}}</van-col>
+                  </van-row>
                 <van-row>
                     <van-col :span="4" style="text-align:center;margin-bottom:5px;">
                         <van-icon name="location-o" style="font-size:12px;color:gray;"></van-icon>
@@ -175,11 +181,11 @@
                 </van-row>
 
                 <van-row>
-                    <van-col :span="4" style="text-align:center;margin-bottom:5px;">
-                        <van-icon name="newspaper-o" style="font-size:12px;color:gray;"></van-icon>
-                    </van-col>
-                    <van-col :span="20" style="font-size:12px;color:gray;">服务内容：{{}}</van-col>
-                </van-row>
+                      <van-col :span="4" style="text-align:center;margin-bottom:5px;">
+                          <van-icon name="phone-o" style="font-size:12px;color:gray;"></van-icon>
+                      </van-col>
+                      <van-col :span="20" style="font-size:12px;color:gray;">顾客电话：{{o.customer.telephone}}</van-col>
+                  </van-row>
                 <van-row>
                     <van-col :span="4" style="text-align:center;margin-bottom:5px;">
                         <van-icon name="location-o" style="font-size:12px;color:gray;"></van-icon>
@@ -255,3 +261,10 @@ export default {
   }
 }
 </script>
+<style  scoped>
+div.nullData {
+  text-align: center;
+  color: #cdcdcd;
+  line-height: 3em;
+}
+</style>
