@@ -8,6 +8,7 @@
         <van-swipe-item><img width="100%" height="300px" src="../../assets/images/4.jpeg" alt=""></van-swipe-item>
       </van-swipe>
       {{token}}
+      {{info}}
     </div>
     
   </div>
@@ -22,7 +23,13 @@ export default {
     ...mapState("user",["info",'token']),
   
   },
- 
+  created() {
+    console.log("hahaha");
+    this.inFo(this.token)
+  },
+  methods: {
+    ...mapActions('user',['inFo']),
+  }
 }
 </script>
 <style scoped>
