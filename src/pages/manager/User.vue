@@ -25,10 +25,13 @@
     </div>
     <div class="body">
       <van-cell is-link @click="myEarnings">我的收入</van-cell>
-       <van-cell is-link @click="order">我的订单</van-cell>
+       <van-cell is-link @click="myOrder">我的订单</van-cell>
     </div>
     <div class="btn" style="text-align:center;">
-      <van-button type="warning" @click="logoutHandler" size="large" style="width:75%;height:40px;line-height:40px;border-radius:4px;">退出</van-button>
+      <van-button plain type="danger" 
+      @click="logoutHandler" size="large" 
+      style="width:65%;height:40px;line-height:40px;border-radius:4px;margin-top:230px;">
+      退出</van-button>
     </div>
   </div>
   <!-- </div> -->
@@ -40,6 +43,10 @@ export default {
     //动作
     ...mapActions("user",["logout"]),
     //普通方法
+    // 我的订单方法
+    myOrder() {},
+    myEarnings() {},
+    // 退出登录方法
     logoutHandler(){
       this.logout()//退出
       .then(()=>{

@@ -15,7 +15,7 @@ export default {
         // token保存，第一次本地还没有token,所以要先设置一次
         refreshToken(state,token){
             state.token=token;
-            console.log( state.token);
+            console.log(state.token);
         }
     },
     actions:{  
@@ -31,7 +31,7 @@ export default {
             
         },
         // 通过token获取info
-        async info(context,token){
+        async inFo(context,token){
            // 根据token获取用户信息
             let response=await get("/user/info",{token});
             //将用户信息设置到info中

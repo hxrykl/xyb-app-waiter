@@ -25,6 +25,8 @@ export default {
     }
   },
   created(){
+
+    // alert(this.token);
     // if(this.token){
     //   //查询info
     //   this.getInfo(this.token);
@@ -41,7 +43,7 @@ export default {
     ...mapMutations("user",{
       'getInfo':"info"
     }) ,
-    //普通方法
+    // 跳转到其他页面
     tabChangeHandler(path){
       this.$router.push({path})
     }

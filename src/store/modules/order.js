@@ -27,6 +27,7 @@ export default{
           // 查询员工的订单信息
           async findAllWaiterOrders({commit,rootState}){
             let waiterId = rootState.user.info.id;
+            console.log("员工id",rootState.user.info.id);
             let response = await get("/order/query",{waiterId});
             response.data.forEach((item) =>{
                 item.orderTime = moment(item.orderTime).format('YYYY-MM-DD HH:mm:ss')

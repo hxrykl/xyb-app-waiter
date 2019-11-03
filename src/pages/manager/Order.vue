@@ -5,6 +5,7 @@
           <van-tab title="所有订单">
             <!-- 所有订单的内容 -->
             <van-row v-if="orders.length !==0">
+              <!-- {{token}} -->
               <van-panel class="title"  :title="o.customer.realname"  :status="o.status"  v-for="o in orders" :key="o.id">
                 <van-row>
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
@@ -16,7 +17,7 @@
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
                     <van-icon name="clock-o" style="font-size:12px;color:gray;"></van-icon>
                   </van-col>
-                  <van-col :span="20" style="font-size:12px;color:gray;">下单时间:{{o.ordertime}}</van-col>
+                  <van-col :span="20" style="font-size:12px;color:gray;">下单时间:{{o.orderTime}}</van-col>
                 </van-row>
                 <van-row>
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
@@ -28,7 +29,9 @@
                   <van-col :span="4" style="text-align:center;margin-buttom:5px;">
                     <van-icon name="" style="font-size:12px;color:gray;"></van-icon>
                   </van-col>
-                  <van-col :span="20" style="font-size:12px;color:gray;">地址:{{o.address}}</van-col>
+                  <van-col :span="20" style="font-size:12px;color:gray;">
+                    地址:{{o.address.province}}{{o.address.city}}{{o.address.area}}{{o.address.address}}
+                  </van-col>
                 </van-row>
               </van-panel>
             </van-row>  
@@ -205,18 +208,24 @@ export default {
   },
   created(){
     // this.findAllOrder()
+    this.inFo(this.token);
+    console.log("token",this.token);
+    // t通过状态筛选订单
     this.filterOrderByStatus();
+    // 查询员工的订单
     this.findAllWaiterOrders();
     
     
   },
   computed:{
     ...mapState('order',['orders']),
+    ...mapState('user',['token']),
     ...mapGetters('order',['filterOrderByStatus'])
   },
   methods:{
     //...mapActions('order',['findAllOrder']),
     ...mapActions("order",["findAllWaiterOrders","acceptOrder","rejectOrder","completeOrder"]),
+    ...mapActions('user',['inFo']),
         // 普通方法
         // 拒绝订单
         rejectOrderHandler(orderId){

@@ -7,6 +7,7 @@
         <van-swipe-item><img width="100%" height="300px" src="../../assets/images/3.jpeg" alt=""></van-swipe-item>
         <van-swipe-item><img width="100%" height="300px" src="../../assets/images/4.jpeg" alt=""></van-swipe-item>
       </van-swipe>
+      {{token}}
     </div>
     
   </div>
@@ -18,7 +19,7 @@ import {mapState,mapActions,mapGetters,mapMutations} from 'vuex'
 export default {
 
   computed:{//为一个对象
-    ...mapState("user",["info"]),
+    ...mapState("user",["info",'token']),
   
   },
  
