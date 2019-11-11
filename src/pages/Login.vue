@@ -1,9 +1,9 @@
 <template>
   <div class="login">
       <div class="header">
-        <div class="logo">jz</div>
+        <div class="logo">bangbb</div>
         <div class="title">
-          家政服务平台--员工端
+          校园帮帮帮--员工端
         </div>
       </div>
       <div class="form">
